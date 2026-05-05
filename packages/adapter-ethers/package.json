@@ -1,0 +1,30 @@
+{
+  "name": "@castkit/adapter-ethers",
+  "version": "0.1.0",
+  "description": "ethers v6 adapter for CastKit.",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "lint": "tsc --noEmit",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": "^18.3.0 || ^19.0.0"
+  },
+  "dependencies": {
+    "@castkit/core": "workspace:*",
+    "ethers": "^6.13.5",
+    "react": "^19.1.0",
+    "viem": "^2.29.0"
+  },
+  "devDependencies": {
+    "@castkit/tsconfig": "workspace:*"
+  }
+}
+
