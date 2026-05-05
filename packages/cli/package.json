@@ -1,0 +1,31 @@
+{
+  "name": "@castkit/cli",
+  "version": "0.1.0",
+  "description": "Scaffolding CLI for CastKit.",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "castkit": "dist/index.cjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "lint": "tsc --noEmit",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "commander": "^13.1.0",
+    "detect-package-manager": "^3.0.2",
+    "fs-extra": "^11.3.0",
+    "handlebars": "^4.7.8",
+    "inquirer": "^12.4.3"
+  },
+  "devDependencies": {
+    "@castkit/tsconfig": "workspace:*"
+  }
+}

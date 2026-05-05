@@ -1,0 +1,15 @@
+import { StakingPanel } from '@castkit/ui'
+
+export default function StakingPage() {
+  return (
+    <main className="min-h-screen bg-slate-950 px-6 py-16">
+      <div className="mx-auto max-w-4xl">
+        <StakingPanel
+          stakingContract="0x1111111111111111111111111111111111111111"
+          tokenContract="0x2222222222222222222222222222222222222222"
+        />
+      </div>
+    </main>
+  )
+}
+

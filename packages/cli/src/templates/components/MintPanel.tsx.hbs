@@ -1,0 +1,16 @@
+import { MintPanel } from '@castkit/ui'
+
+export function FeaturedMint() {
+  return (
+    <MintPanel
+      contractAddress="0x1111111111111111111111111111111111111111"
+      title="Genesis Mint"
+      description="Launch a clean mint flow with CastKit's default Web3 UX."
+      price={0.05}
+      maxSupply={5000}
+      mintedCount={1280}
+      maxPerWallet={3}
+    />
+  )
+}
+

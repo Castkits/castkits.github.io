@@ -1,0 +1,30 @@
+'use client'
+
+import * as React from 'react'
+{{#if isWagmi}}
+import { WalletProvider } from '@castkit/ui'
+import { WagmiAdapter, createCastKitWagmiConfig } from '@castkit/adapter-wagmi'
+
+const wagmiConfig = createCastKitWagmiConfig({
+  walletConnectProjectId: process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID ?? '',
+})
+
+const adapter = new WagmiAdapter({ wagmiConfig })
+{{else}}
+import { EthersAdapter } from '@castkit/adapter-ethers'
+import { WalletProvider } from '@castkit/ui'
+
+const adapter = new EthersAdapter({
+  injectedProvider:
+    typeof window !== 'undefined' ? (window as Window & { ethereum?: any }).ethereum : undefined,
+  rpcUrl: process.env.NEXT_PUBLIC_RPC_URL,
+})
+{{/if}}
+
+export function Web3Provider({ children }: { children: React.ReactNode }) {
+  return (
+    <WalletProvider adapter={adapter} allowedChains={[1, 8453, 137]} theme="dark">
+      {children}
+    </WalletProvider>
+  )
+}

@@ -1,0 +1,24 @@
+import { BaseWalletAdapter } from '@castkit/core'
+import type { SendTransactionRequest, TransactionReceipt, TypedDataDomain, TypedDataField } from 'viem'
+
+export class MyAdapter extends BaseWalletAdapter {
+  readonly name = 'custom'
+
+  async connect(): Promise<void> {}
+  async disconnect(): Promise<void> {}
+  getAddress(): `0x${string}` | null { return null }
+  isConnected(): boolean { return false }
+  getChainId(): number | null { return null }
+  async getBalance(): Promise<bigint> { return 0n }
+  async signMessage(): Promise<`0x${string}`> { throw new Error('Not implemented') }
+  async signTypedData(
+    _domain: TypedDataDomain,
+    _types: Record<string, TypedDataField[]>,
+    _value: Record<string, unknown>,
+  ): Promise<`0x${string}`> { throw new Error('Not implemented') }
+  async switchChain(_chainId: number): Promise<void> {}
+  async sendTransaction(_params: SendTransactionRequest): Promise<`0x${string}`> { throw new Error('Not implemented') }
+  async waitForTransaction(_hash: `0x${string}`): Promise<TransactionReceipt> { throw new Error('Not implemented') }
+  on(): void {}
+  off(): void {}
+}
