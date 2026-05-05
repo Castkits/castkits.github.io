@@ -1,0 +1,10 @@
+{
+  "connect-wallet-button": "ConnectWalletButton",
+  "mint-button": "MintButton",
+  "mint-panel": "MintPanel",
+  "tx-status": "TxStatus",
+  "nft-gallery": "NFTGallery",
+  "token-gate": "TokenGate",
+  "staking-panel": "StakingPanel"
+}
+

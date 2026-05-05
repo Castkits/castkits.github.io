@@ -1,0 +1,19 @@
+# Theming
+
+CastKit ships a Tailwind preset tuned for a dark-first crypto aesthetic.
+
+```ts
+import type { Config } from 'tailwindcss'
+import { castkitTailwindPreset } from '@castkit/ui'
+
+export default {
+  presets: [castkitTailwindPreset],
+} satisfies Config
+```
+
+## Included Tokens
+
+- `cast.primary`, `cast.secondary`, `cast.accent`
+- `cast.dark`, `cast.darker`, `cast.border`, `cast.muted`
+- custom `shadow-cast`, `animate-fade-in`, and grid background helpers
+

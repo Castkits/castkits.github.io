@@ -1,0 +1,19 @@
+# useTransaction
+
+Transaction state machine with guarded transitions, timeout handling, and bounded retries.
+
+## Example
+
+```tsx
+const tx = useTransaction()
+
+await tx.send({ to: '0x...', value: parseEther('0.05') })
+```
+
+## States
+
+- `idle`
+- `pending`
+- `success`
+- `error`
+

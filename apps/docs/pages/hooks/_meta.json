@@ -1,0 +1,8 @@
+{
+  "use-wallet": "useWallet",
+  "use-transaction": "useTransaction",
+  "use-mint": "useMint",
+  "use-ens": "useENS",
+  "use-token-balance": "useTokenBalance"
+}
+

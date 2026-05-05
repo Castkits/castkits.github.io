@@ -1,0 +1,29 @@
+# Quick Start
+
+Launch a working mint surface in three steps.
+
+## 1. Install
+
+```bash
+pnpm add @castkit/ui @castkit/adapter-wagmi
+```
+
+## 2. Wrap Your App
+
+```tsx
+import { WalletProvider } from '@castkit/ui'
+import { WagmiAdapter, createCastKitWagmiConfig } from '@castkit/adapter-wagmi'
+
+const adapter = new WagmiAdapter({
+  wagmiConfig: createCastKitWagmiConfig({ walletConnectProjectId: process.env.NEXT_PUBLIC_WC_ID! }),
+})
+```
+
+## 3. Render a Mint Panel
+
+```tsx
+<WalletProvider adapter={adapter} allowedChains={[1, 8453]} theme="dark">
+  <MintPanel contractAddress="0x..." title="Genesis Mint" price={0.05} maxSupply={5000} mintedCount={1200} />
+</WalletProvider>
+```
+

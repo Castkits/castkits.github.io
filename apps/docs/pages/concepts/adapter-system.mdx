@@ -1,0 +1,14 @@
+# Adapter System
+
+Adapters isolate wallet SDK details from the rest of the stack.
+
+## Contract
+
+Every adapter implements the `WalletAdapter` interface from `@castkit/core`. That means hooks and UI only depend on methods like `connect`, `switchChain`, `sendTransaction`, and `waitForTransaction`.
+
+## Built-In Adapters
+
+- `WagmiAdapter`: recommended default for browser wallets
+- `EthersAdapter`: ethers.js v6 compatible alternative
+- `MockAdapter`: deterministic test and preview adapter
+

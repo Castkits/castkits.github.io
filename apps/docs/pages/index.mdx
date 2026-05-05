@@ -1,0 +1,32 @@
+import { Playground } from '../components/Playground'
+
+# CastKit
+
+CastKit is a layered Web3 UI toolkit for teams that want headless wallet logic and polished React components without locking the product to a single wallet stack.
+
+## What You Get
+
+- Headless hooks in `@castkit/core`
+- Swappable adapters for wagmi, ethers, and tests
+- Tailwind-driven React components in `@castkit/ui`
+- A scaffold CLI for provider and page generation
+
+## Why It Exists
+
+Wallet connection, chain switching, transaction states, mint UX, and token gating usually sprawl across app code. CastKit keeps those concerns in one reusable surface so product teams can compose faster.
+
+## Demo Snippet
+
+<Playground
+  code={`import { WalletProvider, MintButton } from '@castkit/ui'
+import { MockAdapter } from '@castkit/adapter-mock'
+
+export default function Demo() {
+  return (
+    <WalletProvider adapter={MockAdapter.presets.connected()}>
+      <MintButton contractAddress="0x1111111111111111111111111111111111111111" price={0.05} />
+    </WalletProvider>
+  )
+}`}
+/>
+

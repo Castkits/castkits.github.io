@@ -1,0 +1,9 @@
+{
+  "extends": "../../packages/tsconfig/react.json",
+  "compilerOptions": {
+    "baseUrl": "."
+  },
+  "include": ["next-env.d.ts", "pages", "components", "theme.config.tsx"],
+  "exclude": ["node_modules"]
+}
+

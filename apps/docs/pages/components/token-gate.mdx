@@ -1,0 +1,12 @@
+# TokenGate
+
+Conditionally reveals content when a wallet owns a required token balance.
+
+## Example
+
+```tsx
+<TokenGate contractAddress="0x..." fallback={<div>Access denied</div>}>
+  <ExclusiveContent />
+</TokenGate>
+```
+

@@ -1,0 +1,13 @@
+# useENS
+
+Resolve the connected wallet to an ENS profile by supplying a `services.resolveENS` implementation on `WalletProvider`.
+
+```tsx
+<WalletProvider
+  adapter={adapter}
+  services={{ resolveENS: async (address) => ({ name: 'caster.eth', avatar: null }) }}
+>
+  <App />
+</WalletProvider>
+```
+
